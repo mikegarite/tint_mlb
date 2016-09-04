@@ -1,0 +1,42 @@
+<div class="sidebar">
+    <img width="100" src="/images/logo.png" />
+    <h3>Standings</h3>
+    <div class="league-header">
+        <h4 ng-class="{'active' : main.league == 'NL'}" ng-click="main.league = 'NL'">National League</h4>     
+        <h4 ng-class="{'active' : main.league == 'AL'}" ng-click="main.league = 'AL'">American League</h4>
+    </div>
+    <div class="division-header">
+        <h5 ng-class="{'active' : main.division == 'West'}" ng-click="main.division = 'West'">West</h5> 
+        <h5 ng-class="{'active' : main.division == 'Central'}" ng-click="main.division = 'Central'">Central</h5>  
+        <h5 ng-class="{'active' : main.division == 'East'}" ng-click="main.division = 'East'">East</h5> 
+    </div>
+    <ol>
+        <li ng-repeat="team in main.standings" ng-if="team.League == main.league && team.Division == main.division">
+            <label>{{team.Name}}</label> <span>{{team.Wins}} - {{team.Losses}}</span>
+        </li>
+    </ol> 
+    <div class="sidebar-bottom">
+        <h4>News Updates</h4>
+        <div myslider>
+            <ul class="slider">
+                <li ng-repeat="article in main.google.info">
+                    <a href="{{article[0].link}}" target="_blank">
+                    <img max-height="150" src="{{article[2]}}" alt="Image">
+                    <p ng-bind-html="article[1]"></p>
+                </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<ul class="feed">
+    <li ng-repeat="tint in main.feed.info" ng-if="tint[0].picture">
+        <a target="_blank" href="{{tint[0].link}}"><img class="logo" src="{{tint[0].picture}}"/></a>
+        <p>     
+            <label>{{tint[3] * 1000| date:'EEEE, h:mm a'}}</label>
+            <a href="{{tint[4]}}" target="_blank"><span ng-bind-html="tint[1]"></span></a>
+        </p>
+    </li>
+</ul>
+

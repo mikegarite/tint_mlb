@@ -1,0 +1,397 @@
+/******************************************************************
+
+Mobile
+
+******************************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+
+@font-face {
+	font-family: 'mlb_font';
+	src: url('../fonts/BentonSans-CondensedMedium.eot');
+	src: url('../fonts/BentonSans-CondensedMedium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/BentonSans-CondensedMedium.woff') format('woff'),
+		url('../fonts/BentonSans-CondensedMedium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	background-color: #fff;
+	color: $text-color;
+	font-family: $font;
+	font-size: 100%;
+	line-height: 1.5;
+}
+
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 96%;
+	margin: 0 auto;
+}
+
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited {
+	color: $link-color;
+	text-decoration: none;
+
+	/* on hover */
+	&:hover, &:focus {
+		color: $link-hover;
+		text-decoration: underline;
+	}
+
+	/* on click */
+	&:active {
+
+	}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	text-rendering: optimizelegibility;
+	font-weight: 500;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {
+	font-size: 2.5em;
+	line-height: 1.333em;
+}
+
+h2, .h2 {
+	font-size: 1.75em;
+	line-height: 1.4em;
+	margin-bottom: 0.375em;
+}
+
+h3, .h3 {
+	font-size: 1.75rem;
+}
+
+h4, .h4 {
+	font-size: 0.875rem;
+	font-weight: 700;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {
+	background-color: $white;
+}
+
+#inner-header {
+	width: 100%;
+	padding: 0 50px;
+	text-align: center;
+
+	a {
+		font-size: $small;
+		color: $black;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		display: inline-block;
+		margin-right: 50px;
+		line-height: 50px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+#logo {
+	margin: 0.75em 0;
+	display: none;
+
+	a {
+		color: $white;
+	}
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.main-nav {
+	border-bottom: 0;
+	margin: 0;
+	display: none;
+
+	li {
+
+		a {
+			display: block;
+			color: $white;
+			text-decoration: none;
+			padding: 0.75em;
+		}
+	}
+}
+
+
+/*********************
+RESPONSIVE NAV
+*********************/
+
+.hamburger {
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+	
+	&:before {
+		content:'\2261';
+		font-size: 24px;
+		font-weight: bold;
+		color: #555;
+	}
+}
+
+.responsive-wrapper {
+
+	display: none;
+
+	a {
+		display: block;
+		width: 100%;
+		line-height: 2;
+		text-align: center;
+		background: #fff;
+		color: $text-color;
+	}
+}
+
+/*********************
+MAIN PAGE
+*********************/
+
+#content {
+	margin-top: 1.5em;
+}
+
+// slider
+.slider {
+	margin-bottom: 30px;
+}
+
+.image-slider {
+	max-height: 400px;
+
+	img {
+		width: 100%;
+	}
+}
+
+.sidebar{
+	background:#F2F2F2;
+	position:fixed;
+	top:0;
+	left:0;
+	width:30%;
+	height:100%;
+	padding:30px 20px;
+	img{
+		margin:0 auto;
+		display: block;
+	}
+	h3{
+		text-transform:uppercase;
+		font-family: mlb_font;
+		color:#c00;
+		font-size:15px;
+		margin-top:25px;
+		width:100%;
+		text-align:center;
+	}
+
+	.league-header{
+		display: flex;
+		width:100%;
+		h4{
+			flex: 1 1 100%;
+			text-align: center;
+			text-transform: uppercase;
+			cursor: pointer;
+			font-size: 14px;
+			color:#999;
+			&.active{
+				color:#333;
+			}
+		}
+	}
+
+	.division-header{
+		display: flex;
+		width:100%;
+		margin:0 auto;
+		border-radius:25px;
+		border:#ccc 1px solid;
+		padding:0;
+		h5{
+			flex: 1 1 100%;
+			padding:15px 10px;
+			margin:0;
+			text-transform: uppercase;
+			text-align: center;
+			cursor: pointer;
+			-webkit-transition: background 0.3s;
+      -moz-transition: background 0.3s;
+      font-weight: bold;
+      color:#444;
+			&:first-child{
+				border-radius:25px 0 0 25px;
+				border-right:1px solid #ccc;
+			}
+			&:last-child{
+				border-left:1px solid #ccc;
+				border-radius:0px 25px 25px 0px;
+			}
+			&.active, &:hover{
+				background:#fff;				
+			}
+		}
+	}
+
+	ol{
+		margin-top:10px;
+		li{
+			list-style-type: decimal;
+			line-height:28px;
+			border-bottom:#ddd 1px solid;
+			padding:10px;
+			color:#0A2459;
+			width:100%;
+			float:left;
+			label{
+				float:left;
+			}
+			span{
+				float:right;
+			}
+		}
+	}
+.sidebar-bottom{
+	position: absolute;
+	bottom: 0;
+	width:100%;
+	height:200px;
+	h4{
+		text-transform: uppercase;
+	}
+	.slider{
+		width:100%;
+		li{
+			float:left;
+			position: relative;
+			width:100%;
+			height:200px;
+			img{
+				position: absolute;
+				left:0;
+				max-height:100px;
+				max-width: 100px;
+			}
+			p{
+				padding:0;
+				margin:0;
+				margin-left:0px;
+				float:left;
+				width:60%;
+				left:30%;
+				position: absolute;
+			}
+		}
+	}
+}
+	
+	
+}
+
+
+.feed{
+  width:70%;
+  position:absolute;
+  right:0;
+  margin:0;
+  padding:0;
+  li{
+  	background:#fff;
+  	width:100%;
+  	margin:0;
+  	padding:45px;
+  	padding-top:40px;
+  	border-bottom:1px #ddd solid;
+  	label{
+  		font-weight: bold;
+  	}
+  	.logo{
+  		float:left;
+  		border-radius:50%;
+  		cursor: pointer;
+  		margin-right: 30px;
+  	}
+  }
+}
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+	clear: both;
+	background-color: $black;
+	color: $light-gray;
+}
