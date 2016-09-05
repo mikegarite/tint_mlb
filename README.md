@@ -1,28 +1,18 @@
-# AngularJS-Boilerplate
-Simple AngularJS Boilerplate to kick start your new project with SASS support and Gulp watch/build tasks
+# Tint Mlb
+A platform where its easy to get up to date info directly from all baseball teams in the MLB
 
 # Features
-* SASS support including sourceMaps
-* Minimal CSS styling of the view
-* Gulp watch, build and local server tasks
-* Responsive navigation
-* Owl slider directive
-* localStorage service for set, get, remove data
-* queryService $http wrapper to handle calls
-* clear folder structure
-* less than 10 request in build version
-* minified CSS and JS build files
-* google analytics snippet
+* Up to date info on all 30 MLB teams
+* Latest news articles from google in regards to baseball or mlb
+* Up to date baseball standings utilizing an additional API 
+
+#Live Demo
+http://159.203.249.89/#/
+
 
 ## Download
 ```bash
-bower install angularjs-boilerplate
-```
-
-or
-
-```bash
-git clone https://github.com/jbutko/AngularJS-Boilerplate.git
+git clone https://github.com/mikegarite/tint_mlb.git
 ```
 
 ## 1. Setup
@@ -63,54 +53,21 @@ gulp server
 gulp server-build
 ```
 
-## Contact
-Copyright (C) 2015 Jozef Butko<br>
-[www.jozefbutko.com/resume](http://www.jozefbutko.com/resume)<br>
-[www.github.com/jbutko](http://www.github.com/jbutko)<br>
-[@jozefbutko](http://www.twitter.com/jozefbutko)<br>
-Released under MIT license
 
-## Changelog
-### 1.1.7
-- Install all dependencies with 'npm install' (bower included) - pull req #7 by @bbodine1<br>
-15.05.2015
 
-### 1.1.6
-- Cleaned up the gulpfile with gulp-load-plugins - pull req #6 by @davieschoots<br>
-26.04.2015
 
-### 1.1.5
-- added MIT License<br>
-19.04.2015
 
-### 1.1.4
-- added minification of JS files in build task<br>
-- added favicon<br>
-- gulpfile.js beautify and clean up<br>
-- added owl carousel into demo<br>
-04.04.2015
 
-### 1.1.3
-- index.html update: added browserupgrade tag<br>
-- index.html update: http-equiv meta tag, google analytics support<br>
-- comments update in gulpfile.js<br>
-- gulpfile.js formatting<br>
-- pull request #1: removed duplicate gulp require in gulpfile.js<br>
-04.04.2015
 
-### 1.1.2
-- package.json and gulpfile.js clean up<br>
-02.04.2015
 
-### 1.1.1
-- opened responsive nav fix, css build .min appendix, live demo, github icons<br>
-31.03.2015
 
-### 1.1.0
-- many improvements: responsive nav, code clean up, gulp angular templateCache
-support, gulp task for local server, SASS sourceMaps support<br>
-29.03.2015
 
-### 1.0.0
-- initial release<br>
-22.03.2015
+Professional sports teams' front offices are increasingly taking on a very strong social media presence and utilizing different outlets to optimize their engagement with their fans. Some teams are building digital teams around Facebook Live and Twitter and ditching older alternatives as a way to better connect and engage with fans. MLB this year has also taken a leap in putting more efforts into online media advertising. Through the project I kicked off, MLB could easily utlize TINT as an up-to-date social media stream for all teams, and offer additional ways of advertising. As a huge fan of baseball, I know there is nothing like this tool online that allows me to get quick snippets of solely baseball related information that I can rely as unbiased and straight from the teams themselves. 
+
+As the end of the season nears for Major League Baseball it tends to get more exciting and the number of people's attention towards baseball increases. Building a place to funnel a user base to attract advertising for baseball could be a significant monetization effort for TINT. 
+
+
+I built the quick prototype on a basic angular boilerplate. I placed all 30 teams' Twitter accounts into the TINT platorm along with Google search results for "MLB" and "baseball". I used an additional API that grabbed all 30 teams scoring and standings and built a way to easily view that data. I used two different TINT API calls that specifically called for GOOGLE info and another specifically for TWITTER. The Google feed grabs latest news information and the Twitter api call creates a quick feed of all the data. Additionally, I built in a simple loading effect that gives a continuous scroll of baseball data for days. I created a row layout to give the easy straight-foward hacker news type of vibe but for baseball. I grabbed the same font that MLB uses for media and also the colors affiliated. If I could put more time into this, I would put more emphasis on baseball stats to make the page more unique and stand out. I'd also add Facebook pages and provide a way for individual sports teams to be filtered. I'd also love for this to be responsive and mobile friendly. 
+
+
+

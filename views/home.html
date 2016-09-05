@@ -1,3 +1,4 @@
+<!-- Side bar of the application that holds standings and news -->
 <div class="sidebar">
     <img width="100" src="/images/logo.png" />
     <h3>Standings</h3>
@@ -29,7 +30,7 @@
         </div>
     </div>
 </div>
-
+<!-- Tints api feed that calls all relevant mlb data -->
 <ul class="feed">
     <li ng-repeat="tint in main.feed.info" ng-if="tint[0].picture">
         <a target="_blank" href="{{tint[0].link}}"><img class="logo" src="{{tint[0].picture}}"/></a>
