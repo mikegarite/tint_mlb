@@ -57,17 +57,3 @@ gulp server-build
 
 
 
-
-
-
-
-
-Professional sports teams' front offices are increasingly taking on a very strong social media presence and utilizing different outlets to optimize their engagement with their fans. Some teams are building digital teams around Facebook Live and Twitter and ditching older alternatives as a way to better connect and engage with fans. MLB this year has also taken a leap in putting more efforts into online media advertising. Through the project I kicked off, MLB could easily utlize TINT as an up-to-date social media stream for all teams, and offer additional ways of advertising. As a huge fan of baseball, I know there is nothing like this tool online that allows me to get quick snippets of solely baseball related information that I can rely as unbiased and straight from the teams themselves. 
-
-As the end of the season nears for Major League Baseball it tends to get more exciting and the number of people's attention towards baseball increases. Building a place to funnel a user base to attract advertising for baseball could be a significant monetization effort for TINT. 
-
-
-I built the quick prototype on a basic angular boilerplate. I placed all 30 teams' Twitter accounts into the TINT platorm along with Google search results for "MLB" and "baseball". I used an additional API that grabbed all 30 teams scoring and standings and built a way to easily view that data. I used two different TINT API calls that specifically called for GOOGLE info and another specifically for TWITTER. The Google feed grabs latest news information and the Twitter api call creates a quick feed of all the data. Additionally, I built in a simple loading effect that gives a continuous scroll of baseball data for days. I created a row layout to give the easy straight-foward hacker news type of vibe but for baseball. I grabbed the same font that MLB uses for media and also the colors affiliated. If I could put more time into this, I would put more emphasis on baseball stats to make the page more unique and stand out. I'd also add Facebook pages and provide a way for individual sports teams to be filtered. I'd also love for this to be responsive and mobile friendly. 
-
-
-
